@@ -5,7 +5,6 @@ resources:
   source:
     uri: https://github.com/japidei/examples
 
-
 jobs:
 - name: configure-self
   plan:
@@ -20,3 +19,5 @@ jobs:
     passed: [configure-self]
   - set_pipeline: hello-world
     file: concourse-examples/pipelines/hello-world.yml
+  - set_pipeline: time-triggered
+    file: concourse-examples/pipelines/time-triggered.yml
